@@ -4,6 +4,7 @@ import {tools} from '../data/tools';
 import styles from './ToolDetailPage.module.css';
 import GradientGenerator from '../components/GradientGenerator';
 import LoaderGenerator from '../components/LoaderGenerator';
+import ClipPathGenerator from '../components/ClipPathGenerator';
 import GenericToolDetail from '../components/GenericToolDetail';
 import previewConfig from '../configs/previewConfig.json';
 
@@ -53,6 +54,8 @@ export default function ToolDetailPage() {
             <LoaderGenerator />
           ) : tool.slug === 'gradient-generator' ? (
             <GradientGenerator />
+          ) : tool.slug === 'clip-path-generator' ? (
+            <ClipPathGenerator />
           ) : (
             <GenericToolDetail tool={tool} />
           )}
