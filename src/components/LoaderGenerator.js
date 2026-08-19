@@ -20,7 +20,7 @@ export default function LoaderGenerator() {
       await navigator.clipboard.writeText(cssOutput);
       setCopySuccess('Copied!');
       setTimeout(() => setCopySuccess(''), 1800);
-    } catch (e) {
+    } catch {
       setCopySuccess('Copy failed');
       setTimeout(() => setCopySuccess(''), 2000);
     }

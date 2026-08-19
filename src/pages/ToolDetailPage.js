@@ -2,7 +2,10 @@ import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {tools} from '../data/tools';
 import styles from './ToolDetailPage.module.css';
+import GradientGenerator from '../components/GradientGenerator';
 import LoaderGenerator from '../components/LoaderGenerator';
+import GenericToolDetail from '../components/GenericToolDetail';
+import previewConfig from '../configs/previewConfig.json';
 
 export default function ToolDetailPage() {
   const {slug} = useParams();
@@ -48,8 +51,10 @@ export default function ToolDetailPage() {
         <div className={styles.previewPanel}>
           {tool.slug === 'loader-generator' ? (
             <LoaderGenerator />
+          ) : tool.slug === 'gradient-generator' ? (
+            <GradientGenerator />
           ) : (
-            <div className={`${styles.preview} ${styles[`${tool.accent}Preview`]}`} />
+            <GenericToolDetail tool={tool} />
           )}
         </div>
       </section>

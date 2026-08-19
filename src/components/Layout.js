@@ -7,19 +7,11 @@ export default function Layout() {
     <div className={styles.shell}>
       <header className={styles.header}>
         <div className={styles.container}>
-          <NavLink to="/" className={styles.brand} aria-label="CSS Tools home">
+          <NavLink to="/tools" className={styles.brand} aria-label="CSS Tools home">
             <span className={styles.brandMark}>C</span>
             <span>CSS Tools</span>
           </NavLink>
-
           <nav className={styles.nav} aria-label="Main navigation">
-            <NavLink
-              to="/"
-              className={({isActive}) =>
-                isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-              }>
-              Home
-            </NavLink>
             <NavLink
               to="/tools"
               className={({isActive}) =>
@@ -35,10 +27,6 @@ export default function Layout() {
               Categories
             </NavLink>
           </nav>
-
-          <NavLink to="/tools" className={styles.cta}>
-            Browse tools
-          </NavLink>
         </div>
       </header>
 

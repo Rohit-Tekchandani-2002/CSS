@@ -10,11 +10,11 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/tools" replace />} />
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/:slug" element={<ToolDetailPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/tools" replace />} />
       </Route>
     </Routes>
   );

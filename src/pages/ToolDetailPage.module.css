@@ -99,7 +99,18 @@
 .pinkPreview::before,
 .purplePreview::before,
 .orangePreview::before,
-.tealPreview::before {
+.tealPreview::before,
+.indigoPreview::before,
+.cyanPreview::before,
+.amberPreview::before,
+.rosePreview::before,
+.emeraldPreview::before,
+.redPreview::before,
+.violetPreview::before,
+.skyPreview::before,
+.slatePreview::before,
+.grayPreview::before,
+.limePreview::before {
   content: '';
   position: absolute;
   inset: 28px;
@@ -123,6 +134,39 @@
 }
 .tealPreview::before {
   background: linear-gradient(135deg, #99f6e4, #14b8a6);
+}
+.indigoPreview::before {
+  background: linear-gradient(135deg, #a5b4fc, #4f46e5);
+}
+.cyanPreview::before {
+  background: linear-gradient(135deg, #a5f3fc, #06b6d4);
+}
+.amberPreview::before {
+  background: linear-gradient(135deg, #fcd34d, #f59e0b);
+}
+.rosePreview::before {
+  background: linear-gradient(135deg, #fecdd3, #f43f5e);
+}
+.emeraldPreview::before {
+  background: linear-gradient(135deg, #a7f3d0, #059669);
+}
+.redPreview::before {
+  background: linear-gradient(135deg, #fca5a5, #ef4444);
+}
+.violetPreview::before {
+  background: linear-gradient(135deg, #ddd6fe, #8b5cf6);
+}
+.skyPreview::before {
+  background: linear-gradient(135deg, #bfdbfe, #0ea5e9);
+}
+.slatePreview::before {
+  background: linear-gradient(135deg, #cbd5e1, #475569);
+}
+.grayPreview::before {
+  background: linear-gradient(135deg, #e2e8f0, #64748b);
+}
+.limePreview::before {
+  background: linear-gradient(135deg, #d9f99d, #65a30d);
 }
 
 .detailsGrid {

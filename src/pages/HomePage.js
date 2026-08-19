@@ -5,6 +5,8 @@ import styles from './HomePage.module.css';
 
 export default function HomePage() {
   const featuredTools = tools.slice(0, 3);
+  const totalTools = tools.length;
+  const totalCategories = new Set(tools.map(tool => tool.category)).size;
 
   return (
     <>
@@ -13,8 +15,8 @@ export default function HomePage() {
           <span className={styles.eyebrow}>CSS generators</span>
           <h1>Build cleaner interfaces with better CSS tools.</h1>
           <p>
-            Discover ready-to-use generators for loaders, checkboxes, clip paths, patterns,
-            gradients, and shadows designed for modern front-end work.
+            Discover ready-to-use property references, layout helpers, and generators for modern
+            front-end work.
           </p>
 
           <div className={styles.actions}>
@@ -28,11 +30,11 @@ export default function HomePage() {
 
           <ul className={styles.stats}>
             <li>
-              <strong>35+</strong>
+              <strong>{totalTools}</strong>
               <span>tools</span>
             </li>
             <li>
-              <strong>8</strong>
+              <strong>{totalCategories}</strong>
               <span>categories</span>
             </li>
             <li>
