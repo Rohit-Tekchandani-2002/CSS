@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {tools} from '../data/tools';
 import styles from './ToolDetailPage.module.css';
+import LoaderGenerator from '../components/LoaderGenerator';
 
 export default function ToolDetailPage() {
   const {slug} = useParams();
@@ -45,7 +46,11 @@ export default function ToolDetailPage() {
         </div>
 
         <div className={styles.previewPanel}>
-          <div className={`${styles.preview} ${styles[`${tool.accent}Preview`]}`} />
+          {tool.slug === 'loader-generator' ? (
+            <LoaderGenerator />
+          ) : (
+            <div className={`${styles.preview} ${styles[`${tool.accent}Preview`]}`} />
+          )}
         </div>
       </section>
 
